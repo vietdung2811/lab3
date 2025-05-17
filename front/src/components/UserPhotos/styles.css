@@ -1,0 +1,90 @@
+/* UserPhotos.css */
+
+.userphotos-container {
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.userphotos-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.userphotos-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.userphotos-card {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.userphotos-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  background: #f7f7f7;
+}
+
+.userphotos-content {
+  padding: 20px;
+}
+
+.userphotos-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.userphotos-chip {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.userphotos-comments {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.userphotos-divider {
+  height: 1px;
+  background: #eee;
+  margin: 20px 0;
+}
+
+.userphotos-comments-section {
+  margin-top: 20px;
+}
+
+.userphotos-comments-section h3 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.userphotos-comment {
+  padding: 10px 14px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.userphotos-no-comments {
+  font-size: 0.9rem;
+  color: #999;
+}

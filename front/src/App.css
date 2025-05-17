@@ -1,0 +1,151 @@
+/* App.css */
+
+/* Import font chữ mới */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout chính */
+.main-topbar-buffer {
+  height: 80px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Thanh TopBar cải tiến */
+.top-bar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-bar .MuiTypography-h6 {
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar hiện đại */
+.main-grid-item.sidebar {
+  background: linear-gradient(195deg, #ffffff 0%, #f8f9fa 100%) !important;
+  border-radius: 20px !important;
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.08) !important;
+  margin: 16px;
+  padding: 20px !important;
+  height: calc(100vh - 120px);
+  position: sticky;
+  top: 100px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-grid-item.sidebar:hover {
+  transform: translateY(-2px);
+}
+
+/* Main content area */
+.main-grid-item.content {
+  background: linear-gradient(to bottom right, #ffffff, #f8fafc) !important;
+  border-radius: 20px !important;
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.06) !important;
+  margin: 16px 16px 16px 0;
+  padding: 30px !important;
+  min-height: calc(100vh - 120px);
+}
+
+/* User list items */
+.user-item {
+  padding: 15px 20px !important;
+  margin: 8px 0;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+  background: rgba(241, 243, 245, 0.4) !important;
+}
+
+.user-item:hover {
+  background: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateX(5px);
+}
+
+.user-item .MuiTypography-body1 {
+  font-weight: 500 !important;
+  color: #2c3e50 !important;
+}
+
+/* Ảnh user */
+.photo-container {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container:hover {
+  transform: scale(1.03);
+}
+
+.photo-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Nút và interactive elements */
+.MuiButton-containedPrimary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 12px !important;
+  padding: 8px 24px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4) !important;
+}
+
+/* Hiệu ứng loading skeleton */
+.skeleton-animation {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-grid-item.sidebar {
+    margin: 8px;
+    height: auto;
+    position: relative;
+    top: 0;
+  }
+
+  .main-grid-item.content {
+    margin: 8px;
+    padding: 20px !important;
+  }
+
+  .photo-container img {
+    height: 180px;
+  }
+}
